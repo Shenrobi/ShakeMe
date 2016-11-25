@@ -12,6 +12,8 @@
 		E47C50001DCD0D370065534C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47C4FFE1DCD0D370065534C /* Main.storyboard */; };
 		E47C50021DCD0D370065534C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47C50011DCD0D370065534C /* Assets.xcassets */; };
 		E47C50051DCD0D370065534C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47C50031DCD0D370065534C /* LaunchScreen.storyboard */; };
+		E47C500D1DCD0D5B0065534C /* edosz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E47C500C1DCD0D5B0065534C /* edosz.ttf */; };
+		E47C500F1DCD11D90065534C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47C500E1DCD11D90065534C /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E47C50011DCD0D370065534C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E47C50041DCD0D370065534C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E47C50061DCD0D370065534C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E47C500C1DCD0D5B0065534C /* edosz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = edosz.ttf; sourceTree = "<group>"; };
+		E47C500E1DCD11D90065534C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				E47C4FFA1DCD0D370065534C /* AppDelegate.swift */,
+				E47C500E1DCD11D90065534C /* CustomButton.swift */,
 				E47C4FFC1DCD0D370065534C /* ViewController.swift */,
 				E47C4FFE1DCD0D370065534C /* Main.storyboard */,
 				E47C50011DCD0D370065534C /* Assets.xcassets */,
 				E47C50031DCD0D370065534C /* LaunchScreen.storyboard */,
 				E47C50061DCD0D370065534C /* Info.plist */,
+				E47C500C1DCD0D5B0065534C /* edosz.ttf */,
 			);
 			path = ShakeMe;
 			sourceTree = "<group>";
@@ -91,7 +97,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = FlyGoody;
 				TargetAttributes = {
 					E47C4FF61DCD0D370065534C = {
@@ -126,6 +132,7 @@
 			files = (
 				E47C50051DCD0D370065534C /* LaunchScreen.storyboard in Resources */,
 				E47C50021DCD0D370065534C /* Assets.xcassets in Resources */,
+				E47C500D1DCD0D5B0065534C /* edosz.ttf in Resources */,
 				E47C50001DCD0D370065534C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				E47C4FFD1DCD0D370065534C /* ViewController.swift in Sources */,
 				E47C4FFB1DCD0D370065534C /* AppDelegate.swift in Sources */,
+				E47C500F1DCD11D90065534C /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +190,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -204,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -232,6 +241,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -248,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -302,6 +312,7 @@
 				E47C500B1DCD0D370065534C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

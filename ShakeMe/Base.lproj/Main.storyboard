@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="edosz.ttf">
+            <string>EdoSZ</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShakeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +23,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="UYy-ml-dvd"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Me Silly!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix6-IY-TPR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="kb9-IO-30V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="55"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwv-Aa-hXd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KLF-0O-IbH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="55"/>
+                                <color key="textColor" red="0.075733206535864239" green="0.23910229672161429" blue="0.72755393401015223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrV-xi-LTm" customClass="CustomButton" customModule="ShakeMe" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kZN-I0-Tvf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="30"/>
+                                <state key="normal" title="START GAME">
+                                    <color key="titleColor" red="0.07573320654" green="0.23910229669999999" blue="0.72755393400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4a8-HK-pba"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Maracas1" translatesAutoresizingMaskIntoConstraints="NO" id="NMZ-5u-7Bq"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEs-5G-bIp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oTv-Sg-IJT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="55"/>
+                                <color key="textColor" red="0.075733206535864239" green="0.23910229672161429" blue="0.72755393401015223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NMZ-5u-7Bq" firstAttribute="top" secondItem="gwv-Aa-hXd" secondAttribute="bottom" constant="8" id="5P9-CO-7yC"/>
+                            <constraint firstItem="ix6-IY-TPR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7dK-Hl-Po2"/>
+                            <constraint firstItem="ix6-IY-TPR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9wD-QK-2Rb"/>
+                            <constraint firstItem="gwv-Aa-hXd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CoG-aC-yET"/>
+                            <constraint firstItem="UYy-ml-dvd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LHP-6s-p3m"/>
+                            <constraint firstItem="NMZ-5u-7Bq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NGq-U4-C1o"/>
+                            <constraint firstItem="UYy-ml-dvd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PSR-PG-7Rg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qrV-xi-LTm" secondAttribute="bottom" constant="20" id="QMh-zV-E4Q"/>
+                            <constraint firstItem="iEs-5G-bIp" firstAttribute="top" secondItem="NMZ-5u-7Bq" secondAttribute="bottom" constant="8" id="S5p-bZ-Xr1"/>
+                            <constraint firstAttribute="trailing" secondItem="UYy-ml-dvd" secondAttribute="trailing" id="VSz-FY-TMS"/>
+                            <constraint firstItem="gwv-Aa-hXd" firstAttribute="top" secondItem="ix6-IY-TPR" secondAttribute="bottom" constant="8" id="aiz-pn-aQH"/>
+                            <constraint firstItem="NMZ-5u-7Bq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ejF-wd-wuv"/>
+                            <constraint firstItem="qrV-xi-LTm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j1x-bK-2IY"/>
+                            <constraint firstItem="iEs-5G-bIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mvu-1Q-vlk"/>
+                            <constraint firstItem="ix6-IY-TPR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qdQ-I5-PIQ"/>
+                            <constraint firstItem="qrV-xi-LTm" firstAttribute="top" secondItem="iEs-5G-bIp" secondAttribute="bottom" constant="8" id="sea-Jb-Pcf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UYy-ml-dvd" secondAttribute="bottom" id="tLf-cK-Thw"/>
+                            <constraint firstItem="qrV-xi-LTm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xw8-aP-UH9"/>
+                            <constraint firstItem="gwv-Aa-hXd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ycK-4j-Njt"/>
+                            <constraint firstItem="iEs-5G-bIp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ycb-Fh-FFV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameButton" destination="qrV-xi-LTm" id="HPP-z4-OeZ"/>
+                        <outlet property="maracasImage" destination="NMZ-5u-7Bq" id="CJ5-bQ-VpF"/>
+                        <outlet property="scoreLabel" destination="iEs-5G-bIp" id="sdm-F3-PcN"/>
+                        <outlet property="timerLabel" destination="gwv-Aa-hXd" id="iV8-Nl-svj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Maracas1" width="551" height="743"/>
+        <image name="beach" width="1920" height="1080"/>
+    </resources>
 </document>
